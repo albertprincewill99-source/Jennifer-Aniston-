@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jennifer Aniston | Verified Fan Access</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="hero-image">
+        <!-- Replace this with your actual image filename -->
+        <img src="Jennifer.jpg" alt="Jennifer Aniston">
+        <div class="image-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+
+        <div class="brand-mark">A</div>
+
+        <p class="eyebrow">PRIVATE FAN ACCESS</p>
+
+        <h1>
+          Welcome to the
+          <span>Inner Circle</span>
+        </h1>
+
+        <p class="intro">
+          A private opportunity for genuine fans of Jennifer Aniston.
+          Tell us a little about yourself and your favorite
+          piece of content for a chance to receive direct-message access.
+        </p>
+
+        <a href="#verification" class="gold-button">
+          Begin Verification
+          <span>↓</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <div class="luxury-divider">
+      <span></span>
+      <small>✦</small>
+      <span></span>
+    </div>
+
+
+    <!-- VERIFICATION -->
+    <section class="verification" id="verification">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">FAN VERIFICATION</p>
+
+        <h2>
+          Prove you're
+          <span>a true fan.</span>
+        </h2>
+
+        <p>
+          Complete the short form below. Selected early engagers
+          may receive the privilege of direct communication.
+        </p>
+
+      </div>
+
+
+      <!-- NETLIFY FORM -->
+      <form
+        name="fan-verification"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        class="fan-form"
+        id="fanForm"
+      >
+
+        <!-- Required by Netlify -->
+        <input type="hidden" name="form-name" value="fan-verification">
+
+        <!-- Email notification subject -->
+        <input
+          type="hidden"
+          name="subject"
+          data-remove-prefix
+          value="New Albert Fan Verification - %{submissionId}"
+        >
+
+
+        <!-- HONEYPOT -->
+        <p class="honeypot">
+          <label>
+            Don't fill this out if you're human:
+            <input name="bot-field" type="text" tabindex="-1" autocomplete="off">
+          </label>
+        </p>
+
+
+        <div class="form-row">
+
+          <div class="field">
+            <label for="name">FULL NAME</label>
+
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+
+          <div class="field">
+            <label for="age">AGE</label>
+
+            <input
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Your age"
+              min="13"
+              max="120"
+              required
+            >
+          </div>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="email">EMAIL ADDRESS</label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="gender">
+            GENDER <small>(OPTIONAL)</small>
+          </label>
+
+          <select id="gender" name="gender">
+
+            <option value="">
+              Prefer not to say
+            </option>
+
+            <option value="Female">
+              Female
+            </option>
+
+            <option value="Male">
+              Male
+            </option>
+
+            <option value="Non-binary">
+              Non-binary
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="content">
+            MENTION ONE OF Jennifer Aniston's movie
+
+          <textarea
+            id="content"
+            name="content"
+            rows="4"
+            placeholder="Tell us the title, topic, or describe the content you remember..."
+            required
+          ></textarea>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="reason">
+            WHAT DO YOU LIKE MOST ABOUT Jennifer Aniston?
+            <small>(OPTIONAL)</small>
+          </label>
+
+          <textarea
+            id="reason"
+            name="reason"
+            rows="3"
+            placeholder="Tell us what makes you a fan..."
+          ></textarea>
+
+        </div>
+
+
+        <label class="consent">
+
+          <input
+            type="checkbox"
+            id="consent"
+            name="consent"
+            value="Agreed"
+            required
+          >
+
+          <span>
+            I understand that this submission is for fan
+            verification and selection purposes.
+          </span>
+
+        </label>
+
+
+        <button
+          type="submit"
+          class="submit-button"
+          id="submitButton"
+        >
+          <span>SUBMIT MY VERIFICATION</span>
+          <strong>→</strong>
+        </button>
+
+
+        <p class="privacy">
+          Please don't submit passwords, payment information,
+          or other sensitive personal information.
+        </p>
+
+      </form>
+
+
+      <!-- SUCCESS MESSAGE -->
+      <div
+        class="success-message"
+        id="successMessage"
+        aria-live="polite"
+      >
+
+        <div class="success-icon">✓</div>
+
+        <p class="eyebrow">SUBMISSION RECEIVED</p>
+
+        <h2>
+          Thank you,
+          <span>you're on the list.</span>
+        </h2>
+
+        <p>
+          Your fan verification has been successfully received.
+          Please keep an eye on your email for any further communication.
+        </p>
+
+      </div>
+
+
+      <!-- ERROR MESSAGE -->
+      <div
+        class="error-message"
+        id="errorMessage"
+        aria-live="assertive"
+      >
+        We couldn't submit your verification right now.
+        Please check your connection and try again.
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+      <div class="footer-logo">A</div>
+
+      <p>
+        © 2026 Jennifer · Fan Verification.
+      </p>
+
+      <p class="footer-note">
+        Genuine fan engagement only..
+      </p>
+
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
